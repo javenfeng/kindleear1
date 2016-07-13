@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block css -%}
+<style type="text/css">
+p{
+    color:#2d2d2d;
+    /*text-align:center;*/
+    line-height: 1.6em;
+    margin:1em 0 0 0;
+}
+.banner {
+    background-color:#0078e7;
+    text-align: center;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    display: table;
+}
+
+.banner-head {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+}
+.l-box {
+    padding: 0.5em 1em;
+}
+.information {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.information-head {
+    color: black;
+    font-weight: 500;
+}
+
+</style>
+{% endblock -%}
+{% block bodytag -%}
+<body onload="document.getElementById('u').focus();">
+{% endblock -%}
+{% block content -%}
+    <div class="banner">
+        <h1 class="banner-head">
+            {{_("慎终追远，笃思明辨；阅无止境，述往知来。")}}
+        </h1>
+    </div>
+    <div class="pure-g-r">
+    <div class="information pure-u-1-2">
+        <div class="l-box">
+        <h3 class="information-head">{{_("岂止于美")}}</h3>
+        <p>{{_("提取Calibre的mobi模块以通过Python在线生成《经纬日报》mobi格式文件，排版精美，跳转方便；")}}
+            {{_("图文并茂，支持自定义全文RSS，内置优质RSS源，定时递送，低至每天几毛钱，营养均衡的信息大餐直达眼前，何止于“真”。")}}</p>
+        </div>
+    </div>
+    <div class="information pure-u-1-2">
+        <div class="l-box">
+        <h3 class="information-head">{{_("乘天地，游无穷")}}</h3>
+        <p>{{_("依托Github开源的KindleEar程序，")}}
+            {{_("通过基于Nginx和CloudFlare的叠式Reverse代理，")}}
+            {{_("实现用户至Google App Engine的访问；开启SSL Full Strict双端加密和CDN加速，安全极速。邀三五好友，共品圣贤，“经纬称人杰，文章作代英”。")}}</p>
+        </div>
+    </div>
+    </div>
+{% endblock -%}
